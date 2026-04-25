@@ -1,0 +1,16 @@
+@import "tailwindcss";
+*{
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1140px;
+  margin-inline: auto;
+}
+.container-large{
+    max-width: 1210px;
+  margin-inline: auto;
+}
+img{
+  object-fit: cover;
+}
