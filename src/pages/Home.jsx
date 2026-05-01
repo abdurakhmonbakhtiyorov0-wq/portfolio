@@ -9,6 +9,7 @@ import Mastercraft from "../assets/Mastercraft.png";
 import Trinity from "../assets/Trinity.png";
 import ip_redactor from "../assets/ip_redactor.png";
 import weather from "../assets/weather.png";
+import Ai_project from "../assets/AI_Project.png";
 import { Link } from "react-router";
 import Project from "../components/Project";
 import { X } from "lucide-react";
@@ -114,7 +115,7 @@ const Projects = [
       "The classic todo app with a few twists! This app includes a dark/light theme toggle and drag & drop reordering for anyone wanting an extra test.",
     image: `${Todo_logo}`,
     links: {
-      live: "https://react-tasks-project.vercel.app",
+      live: "https://comfy-store-silk-nu.vercel.app",
       repo: "https://github.com/abdurakhmonbakhtiyorov0-wq/react-tasks-project",
       try: "#",
     },
@@ -130,7 +131,7 @@ const Projects = [
     image: `${Comfy_store}`,
     links: {
       live: "https://online-store-rust-tau.vercel.app",
-      repo: "https://github.com/abdurakhmonbakhtiyorov0-wq/online-store",
+      repo: "https://github.com/abdurakhmonbakhtiyorov0-wq/comfy-store",
       try: "#",
     },
   },
@@ -164,6 +165,21 @@ const Projects = [
       try: "#",
     },
   },
+  {
+    id: 11,
+    title: "Ai Project",
+    diff: "4",
+    level: "ADVANCED",
+    tags: ["React Js", "Css"],
+    description:
+      "A  React project with this app you may see a wether of every country you want as well you can see a wind speed or temperature.",
+    image: `${Ai_project}`,
+    links: {
+      live: "https://ai-project-opal-iota.vercel.app",
+      repo: "https://github.com/abdurakhmonbakhtiyorov0-wq/Ai-project",
+      try: "#",
+    },
+  },
 ];
 
 function Home() {
@@ -188,6 +204,11 @@ function Home() {
       bg: "bg-[#f1b604]",
       border: "border-[#f1b604]",
     },
+    4: {
+      text: "text-[#f48925]",
+      bg: "bg-[#f48925]",
+      border: "border-[#f48925]",
+    },
   };
   const styles = diffStyles[about?.diff];
 
@@ -201,7 +222,7 @@ function Home() {
           current count : <span className="logo">{Projects.length}</span>
         </p>
         {about && (
-          <div className="fixed inset-0 z-40  flex p-4 items-center justify-center overflow-y-auto">
+          <div className="fixed inset-0 z-10 bg-black/70  flex p-4 items-center justify-center overflow-y-auto">
             {" "}
             <button
               onClick={() => setAbout(null)}
@@ -233,8 +254,12 @@ function Home() {
                 </div>{" "}
                 <p className="my-8">{about.description}</p>
                 <div className="flex gap-5 justify-end">
-                  <Link to={about.links.live} className="text-start links p-2">Live</Link>
-                  <Link to={about.links.repo} className="text-start links p-2">Repo</Link>
+                  <Link to={about.links.live} className="text-start links p-2">
+                    Live
+                  </Link>
+                  <Link to={about.links.repo} className="text-start links p-2">
+                    Repo
+                  </Link>
                 </div>
               </div>
             </div>{" "}
@@ -250,14 +275,14 @@ function Home() {
               >
                 <div className="overflow-hidden  h-96.75">
                   <img
-                  onClick={() => setAbout(item)}
+                    onClick={() => setAbout(item)}
                     className="object-cover h-96.75 w-full transition duration-300 hover:scale-105"
                     src={item.image}
                     alt=""
                   />
                 </div>{" "}
                 <div className="py-6 px-8">
-                  <h1 className="text-2xl text-start font-medium title">
+                  <h1 className="text-2xl z-0 text-start font-medium title">
                     {item.title}
                   </h1>
                   <div className="flex justify-between  mt-4 items-center">
