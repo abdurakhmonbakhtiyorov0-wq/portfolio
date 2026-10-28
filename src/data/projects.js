@@ -11,6 +11,7 @@ import weather from "../assets/weather.webp";
 import aiProject from "../assets/AI_Project.webp";
 import multikids from "../assets/multikids.webp";
 import novaro from "../assets/novaro.webp";
+import lumina from "../assets/lumina.webp";
 
 const repo = (name) =>
   `https://github.com/abdurakhmonbakhtiyorov0-wq/${name}`;
@@ -72,8 +73,9 @@ export const cases = [
     title: "Lumina Market",
     tint: "bg-blush",
     stack: ["Next.js", "Express", "PostgreSQL"],
+    image: lumina,
     repo: repo("lumina-market"),
-    live: null,
+    live: "https://lumina-market-rouge.vercel.app",
     ru: {
       summary: "Интернет-магазин, где можно и покупать, и продавать.",
       points: [
