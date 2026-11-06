@@ -12,12 +12,38 @@ import aiProject from "../assets/AI_Project.webp";
 import multikids from "../assets/multikids.webp";
 import novaro from "../assets/novaro.webp";
 import lumina from "../assets/lumina.webp";
+import jingletour from "../assets/jingletour.webp";
 
 const repo = (name) =>
   `https://github.com/abdurakhmonbakhtiyorov0-wq/${name}`;
 
 // Big projects. Add `image` (a screenshot import) to show it instead of the title panel.
 export const cases = [
+  {
+    id: "jingletour",
+    title: "JingleTour",
+    tint: "bg-teal-soft",
+    image: jingletour,
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Telegram Bot API"],
+    repo: repo("JingleTour"),
+    live: "https://jingletour.vercel.app",
+    ru: {
+      summary: "Сайт турагентства из Ташкента. Новые туры появляются на сайте сами, прямо из Telegram-канала.",
+      points: [
+        "Пост с хэштегом #тур в канале сам превращается в карточку тура на сайте",
+        "Каталог туров с фильтрами по стране, типу отдыха и цене",
+        "Заявки на туры и авиабилеты приходят администратору в Telegram",
+      ],
+    },
+    uz: {
+      summary: "Toshkentdagi turagentlik sayti. Yangi turlar saytda Telegram-kanaldan avtomatik paydo boʻladi.",
+      points: [
+        "Kanaldagi #тур heshtegli post saytda avtomatik tur kartochkasiga aylanadi",
+        "Davlat, dam olish turi va narx boʻyicha filtrli turlar katalogi",
+        "Tur va aviachiptalarga arizalar administratorga Telegramda keladi",
+      ],
+    },
+  },
   {
     id: "multikids",
     title: "MultiKids",

@@ -7,8 +7,10 @@ const skills = [
   "Tailwind CSS",
   "Node.js",
   "Express",
+  "MongoDB",
   "PostgreSQL",
   "Supabase",
+  "Neon"
 ];
 
 function About({ t }) {
