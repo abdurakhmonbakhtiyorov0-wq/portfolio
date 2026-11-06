@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Secrets and Vercel CLI link
+.env
+.env.*
+.vercel
