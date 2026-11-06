@@ -1,11 +1,15 @@
 import { Send } from "lucide-react";
 import GithubIcon from "./GithubIcon";
+import LeadForm from "./LeadForm";
 import { GITHUB, TELEGRAM } from "../content";
 
 function Contact({ t }) {
   return (
     <>
-      <section id="contact" className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28">
+      <section
+        id="contact"
+        className="mx-auto grid max-w-6xl items-start gap-12 px-4 py-20 sm:px-6 md:grid-cols-2 md:py-28"
+      >
         <div className="max-w-2xl">
           <h2 className="font-display text-3xl leading-tight font-bold sm:text-4xl">
             {t.contact.title}
@@ -22,6 +26,7 @@ function Contact({ t }) {
           </a>
           <p className="mt-3 text-sm text-muted">@Bahtiyorov_Abdurahmon</p>
         </div>
+        {import.meta.env.VITE_LEAD_FORM === "on" && <LeadForm t={t} />}
       </section>
 
       <footer className="border-t border-line">

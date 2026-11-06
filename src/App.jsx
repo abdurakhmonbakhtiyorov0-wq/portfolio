@@ -8,6 +8,10 @@ import Steps from "./components/Steps";
 import Cases from "./components/Cases";
 import Practice from "./components/Practice";
 import Contact from "./components/Contact";
+import Demos from "./components/Demos";
+import Testimonials from "./components/Testimonials";
+import Faq from "./components/Faq";
+import { Analytics } from "@vercel/analytics/react";
 
 function initialLang() {
   try {
@@ -43,11 +47,15 @@ function App() {
         <Hero t={t} />
         <About t={t} />
         <Services t={t} />
+        <Demos t={t} />
         <Steps t={t} />
         <Cases t={t} lang={lang} />
+        <Testimonials t={t} />
         <Practice t={t} lang={lang} />
+        <Faq t={t} />
       </main>
       <Contact t={t} />
+      <Analytics />
     </>
   );
 }

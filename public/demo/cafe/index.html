@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Кофейня «Bodom» — демо-сайт</title>
+<meta name="description" content="Демо-сайт кофейни: меню с ценами, бронь столика, адрес и часы работы." />
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../demo.css" />
+<style>
+  :root {
+    --bg: #eef2e6;
+    --card: #ffffff;
+    --ink: #2f241e;
+    --muted: #6b5f57;
+    --line: #d6dcc9;
+    --leaf: #4f6b2f;
+    --caramel: #b8692b;
+  }
+  body { background: var(--bg); color: var(--ink); font-family: "Nunito", system-ui, sans-serif; }
+  h1, h2, h3, .logo { font-family: "Rubik", system-ui, sans-serif; font-weight: 600; }
+
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 0; }
+  .logo { font-size: 24px; font-weight: 700; color: var(--leaf); }
+
+  .hero { display: grid; gap: 40px; align-items: center; padding-block: 32px 72px; }
+  @media (min-width: 860px) { .hero { grid-template-columns: 1fr 1fr; } }
+  .hero h1 { font-size: clamp(40px, 7vw, 72px); line-height: 1.05; }
+  .hero p { margin-top: 20px; font-size: 19px; color: var(--muted); max-width: 40ch; }
+  .hero .actions { margin-top: 32px; }
+  .hero img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 200px 200px 24px 24px; }
+  .hours-chip { display: inline-block; margin-top: 24px; padding: 8px 16px; border-radius: 999px; background: var(--card); font-weight: 600; }
+  .hours-chip b { color: var(--leaf); }
+
+  .btn { background: var(--leaf); color: #fff; }
+  .btn:hover { background: #3e5524; }
+  .btn.ghost { background: var(--card); color: var(--ink); }
+  .btn.ghost:hover { background: #fff8f0; }
+
+  .menu { background: var(--card); border-radius: 24px; padding: clamp(24px, 5vw, 56px); }
+  .menu-cols { display: grid; gap: 40px; margin-top: 32px; }
+  @media (min-width: 760px) { .menu-cols { grid-template-columns: 1fr 1fr; } }
+  .menu h3 { font-size: 20px; color: var(--leaf); margin-bottom: 12px; }
+  .menu-item { display: flex; align-items: baseline; gap: 8px; padding: 8px 0; }
+  .menu-item span { font-weight: 600; }
+  .menu-item i { flex: 1; border-bottom: 2px dotted var(--line); transform: translateY(-4px); }
+  .menu-item b { color: var(--caramel); white-space: nowrap; }
+  .menu-note { margin-top: 24px; color: var(--muted); font-size: 15px; }
+
+  .gallery { display: grid; gap: 16px; margin-top: 32px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 20px; }
+
+  .booking { background: var(--card); border-radius: 24px; }
+  .field input, .field select { background: var(--bg); border: 2px solid transparent; color: var(--ink); }
+  .field input:focus, .field select:focus { border-color: var(--leaf); }
+  .info dt { color: var(--muted); }
+  footer { color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="demo-bar">
+  Это демо-сайт: так может выглядеть сайт вашего кафе.
+  <a href="https://t.me/Bahtiyorov_Abdurahmon" target="_blank" rel="noopener">Заказать такой же</a>
+</div>
+
+<header class="wrap nav">
+  <div class="logo">bodom coffee</div>
+  <a class="btn ghost" href="#menu">Меню</a>
+</header>
+
+<section class="wrap hero">
+  <div>
+    <h1>Кофе, десерты и тихое место для встреч</h1>
+    <p>Варим кофе из свежей обжарки, печём десерты каждое утро. Можно забронировать столик заранее.</p>
+    <div class="actions">
+      <a class="btn" href="#book">Забронировать столик</a>
+      <a class="btn ghost" href="#menu">Смотреть меню</a>
+    </div>
+    <p class="hours-chip"><b>Открыто</b> каждый день, 8:00–23:00</p>
+  </div>
+  <img src="https://images.pexels.com/photos/30403595/pexels-photo-30403595.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Капучино и кусочек торта на столе" />
+</section>
+
+<section class="wrap" id="menu">
+  <div class="menu">
+    <h2 class="section-title">Меню</h2>
+    <div class="menu-cols">
+      <div>
+        <h3>Кофе</h3>
+        <p class="menu-item"><span>Эспрессо</span><i></i><b>18 000</b></p>
+        <p class="menu-item"><span>Капучино</span><i></i><b>28 000</b></p>
+        <p class="menu-item"><span>Латте</span><i></i><b>30 000</b></p>
+        <p class="menu-item"><span>Раф ванильный</span><i></i><b>35 000</b></p>
+        <p class="menu-item"><span>Айс-латте</span><i></i><b>32 000</b></p>
+      </div>
+      <div>
+        <h3>Еда и десерты</h3>
+        <p class="menu-item"><span>Круассан</span><i></i><b>22 000</b></p>
+        <p class="menu-item"><span>Чизкейк</span><i></i><b>38 000</b></p>
+        <p class="menu-item"><span>Медовик</span><i></i><b>34 000</b></p>
+        <p class="menu-item"><span>Завтрак до 12:00</span><i></i><b>55 000</b></p>
+        <p class="menu-item"><span>Сэндвич с курицей</span><i></i><b>42 000</b></p>
+      </div>
+    </div>
+    <p class="menu-note">Цены в сумах. Альтернативное молоко — бесплатно.</p>
+  </div>
+</section>
+
+<section class="wrap section">
+  <h2 class="section-title">Как у нас</h2>
+  <div class="gallery">
+    <img src="https://images.pexels.com/photos/29784882/pexels-photo-29784882.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Латте при свечах" loading="lazy" />
+    <img src="https://images.pexels.com/photos/38055463/pexels-photo-38055463.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Зал кофейни с гостями" loading="lazy" />
+    <img src="https://images.pexels.com/photos/32064221/pexels-photo-32064221.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Капучино на мраморном столе" loading="lazy" />
+  </div>
+</section>
+
+<section class="wrap section" id="book">
+  <div class="booking-grid">
+    <form class="booking demo-form">
+      <h2 class="section-title">Бронь столика</h2>
+      <label class="field">Имя<input name="name" required autocomplete="name" /></label>
+      <label class="field">Телефон<input name="phone" type="tel" required autocomplete="tel" placeholder="+998" /></label>
+      <label class="field">Сколько гостей
+        <select name="guests"><option>1–2</option><option>3–4</option><option>5–6</option><option>Больше 6</option></select>
+      </label>
+      <label class="field">Дата и время<input name="time" type="datetime-local" required /></label>
+      <button class="btn" type="submit">Забронировать</button>
+      <p class="demo-result" role="status"></p>
+    </form>
+
+    <div>
+      <dl class="info">
+        <div><dt>Адрес</dt><dd>Ташкент, ул. Примерная, 7</dd></div>
+        <div><dt>Часы работы</dt><dd>Каждый день, 8:00–23:00</dd></div>
+        <div><dt>Телефон</dt><dd>+998 XX XXX-XX-XX</dd></div>
+      </dl>
+      <iframe class="map" title="Карта" loading="lazy" src="https://maps.google.com/maps?q=Tashkent&z=13&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">© Bodom Coffee. Демо-сайт, сделал <a href="https://portfolio-xi-jade-72.vercel.app" target="_blank" rel="noopener">Абдурахмон Бахтиёров</a>.</footer>
+
+<script src="../demo.js"></script>
+</body>
+</html>

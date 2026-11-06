@@ -77,6 +77,62 @@ export const content = {
         },
       ],
     },
+    demos: {
+      title: "Примеры для вашего бизнеса",
+      text: "Готовые демо-сайты для популярных ниш. Под ваш бизнес меняю название, фото, цены и тексты.",
+      open: "Открыть пример",
+      items: {
+        barbershop: { name: "Барбершоп", text: "Цены, мастера и онлайн-запись" },
+        cafe: { name: "Кофейня", text: "Меню с ценами и бронь столика" },
+        autoservice: { name: "Автосервис", text: "Услуги с ценами и запись на ремонт" },
+      },
+    },
+    testimonials: {
+      title: "Отзывы",
+      // Add reviews here: { text: "...", name: "Имя", role: "Бизнес" }
+      items: [],
+    },
+    faq: {
+      title: "Частые вопросы",
+      items: [
+        {
+          q: "Сколько стоит сайт?",
+          a: "Зависит от объёма: визитка дешевле, сайт с каталогом и админкой дороже. Напишите, что вам нужно, — назову точную цену до начала работы.",
+        },
+        {
+          q: "Сколько времени занимает работа?",
+          a: "Срок зависит от объёма, я называю его до начала работы. Быстрее всего делается сайт-визитка.",
+        },
+        {
+          q: "Нужно ли платить за домен и хостинг?",
+          a: "Домен — это адрес сайта, например ustara.uz. Он оплачивается раз в год, сумму подскажу под ваш вариант. Размещение небольшого сайта часто бесплатное. Помогу всё купить и настроить.",
+        },
+        {
+          q: "Смогу ли я сам менять цены и фото?",
+          a: "Да, если выбрать сайт с админкой. В сайте-визитке изменения вношу я — просто напишите в Telegram.",
+        },
+        {
+          q: "Что если что-то сломается?",
+          a: "Напишите мне — разберусь и исправлю. Ошибки, которые появились по моей вине, исправляю бесплатно.",
+        },
+        {
+          q: "Вам правда 13 лет?",
+          a: "Да. Посмотрите мои работы выше — их можно открыть и проверить, включая сайт настоящего турагентства.",
+        },
+      ],
+    },
+    form: {
+      title: "Или оставьте заявку",
+      name: "Имя",
+      contact: "Телефон или Telegram",
+      business: "Ваш бизнес",
+      businessHint: "Например, барбершоп",
+      message: "Что нужно сделать",
+      send: "Отправить заявку",
+      sending: "Отправляю…",
+      success: "Заявка отправлена! Отвечу в ближайшее время.",
+      error: "Не получилось отправить. Напишите, пожалуйста, в Telegram.",
+    },
     cases: { title: "Большие проекты", stack: "Технологии", real: "Реальный бизнес" },
     practice: {
       title: "Учебные проекты",
@@ -165,6 +221,61 @@ export const content = {
           text: "Sayt internetda paydo boʻladi. Domen bilan yordam beraman va undan qanday foydalanishni tushuntiraman.",
         },
       ],
+    },
+    demos: {
+      title: "Biznesingiz uchun namunalar",
+      text: "Mashhur sohalar uchun tayyor demo-saytlar. Biznesingizga moslab nom, rasmlar, narxlar va matnlarni oʻzgartiraman.",
+      open: "Namunani ochish",
+      items: {
+        barbershop: { name: "Sartaroshxona", text: "Narxlar, ustalar va onlayn yozilish" },
+        cafe: { name: "Qahvaxona", text: "Narxli menyu va stol band qilish" },
+        autoservice: { name: "Avtoservis", text: "Narxli xizmatlar va taʼmirga yozilish" },
+      },
+    },
+    testimonials: {
+      title: "Fikrlar",
+      items: [],
+    },
+    faq: {
+      title: "Koʻp beriladigan savollar",
+      items: [
+        {
+          q: "Sayt qancha turadi?",
+          a: "Hajmga bogʻliq: vizitka arzonroq, katalog va admin panelli sayt qimmatroq. Nima kerakligini yozing — ishni boshlashdan oldin aniq narxni aytaman.",
+        },
+        {
+          q: "Ish qancha vaqt oladi?",
+          a: "Muddat hajmga bogʻliq, uni ishni boshlashdan oldin aytaman. Eng tez sayt-vizitka tayyorlanadi.",
+        },
+        {
+          q: "Domen va xosting uchun toʻlash kerakmi?",
+          a: "Domen — bu sayt manzili, masalan ustara.uz. U yiliga bir marta toʻlanadi, summasini variantingizga qarab aytaman. Kichik saytni joylashtirish koʻpincha bepul. Hammasini sotib olish va sozlashda yordam beraman.",
+        },
+        {
+          q: "Narx va rasmlarni oʻzim oʻzgartira olamanmi?",
+          a: "Ha, agar admin panelli saytni tanlasangiz. Sayt-vizitkada oʻzgarishlarni men kiritaman — Telegramga yozing, xolos.",
+        },
+        {
+          q: "Biror narsa buzilib qolsa-chi?",
+          a: "Menga yozing — tekshirib, tuzataman. Mening aybim bilan paydo boʻlgan xatolarni bepul tuzataman.",
+        },
+        {
+          q: "Rostdan ham 13 yoshdamisiz?",
+          a: "Ha. Yuqoridagi ishlarimni koʻring — ularni ochib tekshirish mumkin, jumladan haqiqiy turagentlik saytini ham.",
+        },
+      ],
+    },
+    form: {
+      title: "Yoki ariza qoldiring",
+      name: "Ism",
+      contact: "Telefon yoki Telegram",
+      business: "Biznesingiz",
+      businessHint: "Masalan, sartaroshxona",
+      message: "Nima qilish kerak",
+      send: "Arizani yuborish",
+      sending: "Yuborilmoqda…",
+      success: "Ariza yuborildi! Tez orada javob beraman.",
+      error: "Yuborib boʻlmadi. Iltimos, Telegramga yozing.",
     },
     cases: { title: "Katta loyihalar", stack: "Texnologiyalar", real: "Haqiqiy biznes" },
     practice: {

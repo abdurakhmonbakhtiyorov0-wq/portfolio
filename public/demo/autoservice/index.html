@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Автосервис «Motor Servis» — демо-сайт</title>
+<meta name="description" content="Демо-сайт автосервиса: услуги с ценами, запись на ремонт, адрес и часы работы." />
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../demo.css" />
+<style>
+  :root {
+    --bg: #f2f3f5;
+    --card: #ffffff;
+    --ink: #16181d;
+    --muted: #5b616e;
+    --line: #dde0e5;
+    --orange: #e85d10;
+    --steel: #2a2f38;
+  }
+  body { background: var(--bg); color: var(--ink); font-family: "Roboto", system-ui, sans-serif; }
+  h1, h2, .logo, .tile b, .fact b { font-family: "Russo One", system-ui, sans-serif; font-weight: 400; }
+
+  .top { background: var(--steel); color: #fff; }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 0; }
+  .logo { font-size: 22px; }
+  .logo span { color: var(--orange); }
+  .nav a.phone { font-weight: 700; text-decoration: none; }
+
+  .hero { display: grid; background: var(--steel); color: #fff; }
+  @media (min-width: 900px) { .hero { grid-template-columns: 1fr 1fr; } }
+  .hero-text { padding: 56px max(16px, calc((100vw - 1120px) / 2)); padding-right: 40px; align-self: center; }
+  .hero h1 { font-size: clamp(36px, 6vw, 62px); line-height: 1.05; }
+  .hero p { margin-top: 18px; font-size: 18px; color: #c5cad3; max-width: 42ch; }
+  .hero .actions { margin-top: 28px; }
+  .hero img { width: 100%; height: 100%; min-height: 320px; object-fit: cover; }
+
+  .btn { border-radius: 8px; background: var(--orange); color: #fff; }
+  .btn:hover { background: #c94d09; }
+  .btn.ghost { background: transparent; color: #fff; border: 2px solid #4a515d; }
+  .btn.ghost:hover { border-color: var(--orange); }
+
+  .tiles { display: grid; gap: 16px; margin-top: 32px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .tile { background: var(--card); border-left: 4px solid var(--orange); border-radius: 8px; padding: 22px; }
+  .tile b { display: block; font-size: 19px; }
+  .tile p { color: var(--muted); margin-top: 6px; font-size: 15px; }
+  .tile strong { display: block; margin-top: 14px; font-size: 18px; }
+
+  .facts { display: grid; gap: 24px; margin-top: 32px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .fact img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 8px; }
+  .fact b { display: block; margin-top: 14px; font-size: 19px; }
+  .fact p { color: var(--muted); margin-top: 4px; }
+
+  .booking { background: var(--card); border-radius: 8px; }
+  .field input, .field select { background: var(--bg); border: 2px solid var(--line); color: var(--ink); border-radius: 8px; }
+  .field input:focus, .field select:focus { border-color: var(--orange); }
+  .info dt { color: var(--muted); }
+  .map { border-radius: 8px; }
+  footer { color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="demo-bar">
+  Это демо-сайт: так может выглядеть сайт вашего автосервиса.
+  <a href="https://t.me/Bahtiyorov_Abdurahmon" target="_blank" rel="noopener">Заказать такой же</a>
+</div>
+
+<div class="top">
+  <header class="wrap nav">
+    <div class="logo">MOTOR<span>SERVIS</span></div>
+    <a class="phone" href="#book">+998 XX XXX-XX-XX</a>
+  </header>
+</div>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Ремонт авто с ценой до начала работ</h1>
+    <p>Сначала диагностика и понятная смета, потом ремонт. Гарантия на работы — 6 месяцев.</p>
+    <div class="actions">
+      <a class="btn" href="#book">Записаться на ремонт</a>
+      <a class="btn ghost" href="#services">Услуги и цены</a>
+    </div>
+  </div>
+  <img src="https://images.pexels.com/photos/8985667/pexels-photo-8985667.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Автомобиль на подъёмнике в сервисе" />
+</section>
+
+<section class="wrap section" id="services">
+  <h2 class="section-title">Услуги и цены</h2>
+  <div class="tiles">
+    <div class="tile"><b>Компьютерная диагностика</b><p>Проверка всех систем, отчёт на руки</p><strong>150 000 сум</strong></div>
+    <div class="tile"><b>Замена масла</b><p>Масло и фильтр, 20 минут</p><strong>от 100 000 сум</strong></div>
+    <div class="tile"><b>Развал-схождение</b><p>3D-стенд, все типы авто</p><strong>180 000 сум</strong></div>
+    <div class="tile"><b>Шиномонтаж</b><p>Снятие, монтаж, балансировка</p><strong>от 120 000 сум</strong></div>
+    <div class="tile"><b>Ремонт ходовой</b><p>Подвеска, рулевое, тормоза</p><strong>после осмотра</strong></div>
+    <div class="tile"><b>Ремонт двигателя</b><p>От мелкого ремонта до капитального</p><strong>после диагностики</strong></div>
+  </div>
+</section>
+
+<section class="wrap section">
+  <h2 class="section-title">Почему к нам едут</h2>
+  <div class="facts">
+    <div class="fact">
+      <img src="https://images.pexels.com/photos/4116224/pexels-photo-4116224.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Мастер ремонтирует двигатель" loading="lazy" />
+      <b>Смета до ремонта</b><p>Называем цену заранее и не меняем её без вашего согласия.</p>
+    </div>
+    <div class="fact">
+      <img src="https://images.pexels.com/photos/8986040/pexels-photo-8986040.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Цех автосервиса" loading="lazy" />
+      <b>Своё оборудование</b><p>Подъёмники, стенд развал-схождения, диагностика всех марок.</p>
+    </div>
+    <div class="fact">
+      <img src="https://images.pexels.com/photos/3807799/pexels-photo-3807799.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Механик проверяет колёса на подъёмнике" loading="lazy" />
+      <b>Гарантия 6 месяцев</b><p>Если что-то не так после ремонта — исправим бесплатно.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap section" id="book">
+  <div class="booking-grid">
+    <form class="booking demo-form">
+      <h2 class="section-title">Запись на ремонт</h2>
+      <label class="field">Имя<input name="name" required autocomplete="name" /></label>
+      <label class="field">Телефон<input name="phone" type="tel" required autocomplete="tel" placeholder="+998" /></label>
+      <label class="field">Марка и модель авто<input name="car" required placeholder="Например, Chevrolet Cobalt" /></label>
+      <label class="field">Что нужно сделать
+        <select name="service">
+          <option>Диагностика</option><option>Замена масла</option><option>Развал-схождение</option>
+          <option>Шиномонтаж</option><option>Ремонт ходовой</option><option>Другое</option>
+        </select>
+      </label>
+      <button class="btn" type="submit">Записаться</button>
+      <p class="demo-result" role="status"></p>
+    </form>
+
+    <div>
+      <dl class="info">
+        <div><dt>Адрес</dt><dd>Ташкент, ул. Примерная, 45</dd></div>
+        <div><dt>Часы работы</dt><dd>Пн–Сб, 9:00–19:00</dd></div>
+        <div><dt>Телефон</dt><dd>+998 XX XXX-XX-XX</dd></div>
+      </dl>
+      <iframe class="map" title="Карта" loading="lazy" src="https://maps.google.com/maps?q=Tashkent&z=13&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">© Motor Servis. Демо-сайт, сделал <a href="https://portfolio-xi-jade-72.vercel.app" target="_blank" rel="noopener">Абдурахмон Бахтиёров</a>.</footer>
+
+<script src="../demo.js"></script>
+</body>
+</html>
