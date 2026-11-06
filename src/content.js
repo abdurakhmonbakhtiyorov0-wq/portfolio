@@ -77,7 +77,7 @@ export const content = {
         },
       ],
     },
-    cases: { title: "Большие проекты", stack: "Технологии" },
+    cases: { title: "Большие проекты", stack: "Технологии", real: "Реальный бизнес" },
     practice: {
       title: "Учебные проекты",
       text: "Задания с Frontend Mentor и мои мини-приложения на React. Нажмите на проект, чтобы узнать больше.",
@@ -166,7 +166,7 @@ export const content = {
         },
       ],
     },
-    cases: { title: "Katta loyihalar", stack: "Texnologiyalar" },
+    cases: { title: "Katta loyihalar", stack: "Texnologiyalar", real: "Haqiqiy biznes" },
     practice: {
       title: "Oʻquv loyihalari",
       text: "Frontend Mentor topshiriqlari va Reactdagi kichik ilovalarim. Batafsil bilish uchun loyihani bosing.",

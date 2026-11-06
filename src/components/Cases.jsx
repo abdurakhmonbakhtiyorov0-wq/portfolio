@@ -32,6 +32,11 @@ function Cases({ t, lang }) {
               )}
 
               <div>
+                {item.real && (
+                  <p className="mb-3 inline-block rounded-full bg-teal px-3 py-1 text-sm font-semibold text-white">
+                    {t.cases.real}
+                  </p>
+                )}
                 <h3 className="font-display text-2xl font-bold">{item.title}</h3>
                 <p className="mt-3 text-lg">{text.summary}</p>
                 <ul className="mt-5 space-y-2.5">
